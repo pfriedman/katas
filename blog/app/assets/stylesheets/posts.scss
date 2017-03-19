@@ -1,0 +1,36 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  padding-bottom: 2rem;
+}
+
+#error_explanation {
+  width: 100%;
+  color: crimson;
+}
+
+.flash {
+  padding: 0 3rem;
+}
+
+.notice {
+  color: green;
+}
+
+.alert {
+  color: red;
+}
+
+.shared-links {
+  border-top: 1px solid lightgrey;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.post_body {
+  textarea {
+    min-height: 15rem;
+  }
+}
