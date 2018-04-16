@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.push(File.join(File.dirname(__FILE__), "/../lib"))
+require "phrase_fetcher"
+
+phrase_fetcher = PhraseFetcher.new(text: ARGF.read)
+puts "Here are the most common three word sequences in the given text:"
+
+phrase_fetcher.most_common_word_sequences.each do |sequence, count|
+  puts "#{count}: #{sequence}"
+end

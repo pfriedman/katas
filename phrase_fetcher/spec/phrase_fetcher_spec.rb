@@ -56,4 +56,40 @@ describe PhraseFetcher do
       expect(subject.words).to eq expected
     end
   end
+
+  describe "#most_common_word_sequences" do
+    let(:text) {
+      text = ""
+      text << "I'm the winner " * 8
+      text << "The runner up " * 6
+      text << "Third place result " * 4
+      text << "Three other words"
+      text
+    }
+
+    let(:expected) {
+      [
+        ["im the winner", 8],
+        ["winner im the", 7],
+        ["the winner im", 7],
+        ["the runner up", 6],
+        ["runner up the", 5],
+        ["up the runner", 5],
+        ["third place result", 4],
+        ["result third place", 3],
+        ["place result third", 3],
+        ["runner up third", 1],
+        ["up third place", 1],
+        ["winner the runner", 1],
+        ["the winner the", 1],
+        ["place result three", 1],
+        ["result three other", 1],
+        ["three other words", 1]
+      ]
+    }
+
+    it "returns the most common word sequences" do
+      expect(subject.most_common_word_sequences).to eq expected
+    end
+  end
 end
