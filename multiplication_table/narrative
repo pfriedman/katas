@@ -1,0 +1,18 @@
+How I approached this solution
+
+I thought that I had already done something where I created a list of prime numbers in a kata years ago.
+Turns out I did not - only prime factors so I did a quick search on how to generate prime numbers.
+Looks like the https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes is the most efficient way.
+This is probably the only named Sieve I know of so let's start there.
+
+./spec/prime_number_spec.rb
+
+Since we are displaying a multiplication table in a terminal window we don't have to know about too many prime numbers.
+Imagine what the screen would look like when the numbers in the row is larger than the width of the screen.
+So arbitrarily I decided that we'll know about the first 10000 primes - a large but managable number.
+I found that the 10000th prime is 104729 and 10001st is 104743 so let's set the max integer to determine to the 10000th + 1.
+
+I'll use the Ruby Prime class to verify that the PrimeNumber#sieve method is accurate.
+
+
+
