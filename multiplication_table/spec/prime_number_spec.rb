@@ -1,7 +1,6 @@
 require 'rspec'
 require 'prime'
 require_relative '../lib/prime_number'
-# require File.expand_path(File.join(File.dirname(__FILE__), '../lib/prime_number'))
 
 describe PrimeNumber do
   subject { described_class.new }

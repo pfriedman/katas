@@ -6,6 +6,7 @@ Looks like the https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes is the most e
 This is probably the only named Sieve I know of so let's start there.
 
 ./spec/prime_number_spec.rb
+./lib/prime_number.rb
 
 Since we are displaying a multiplication table in a terminal window we don't have to know about too many prime numbers.
 Imagine what the screen would look like when the numbers in the row is larger than the width of the screen.
@@ -14,5 +15,20 @@ I found that the 10000th prime is 104729 and 10001st is 104743 so let's set the 
 
 I'll use the Ruby Prime class to verify that the PrimeNumber#sieve method is accurate.
 
+Next up is to output the multiplication table to the terminal.
+My first thought is about formatting because we don't really want to wrap across the console width so I looked to see if I could determine the terminal width.
+Apparently this is fairly easy to do
+```
+require 'io/console'
+IO.console.winsize
+```
 
+I looked at the 1000th prime (7919) and the square of that (62710561) has 8 characters so this seems to be a reasonable max cell width.
+Of course we'll have to pad that with at least one character to separate the values in the output.
+So now all we have to do is output the data.
+
+./spec/multiplication_table_spec.rb
+./lib/multiplication_table.rb
+
+First we generate the data table.
 
