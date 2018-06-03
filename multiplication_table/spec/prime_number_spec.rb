@@ -1,6 +1,4 @@
-require 'rspec'
-require 'prime'
-require_relative '../lib/prime_number'
+require 'spec_helper'
 
 describe PrimeNumber do
   subject { described_class.new }

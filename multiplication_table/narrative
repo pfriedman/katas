@@ -32,3 +32,8 @@ So now all we have to do is output the data.
 
 First we generate the data table.
 
+Then we can output the formatted table.
+
+./spec/table_printer_spec.rb
+./lib/table_printer.rb
+

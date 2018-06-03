@@ -1,7 +1,6 @@
 require_relative 'prime_number'
 
 class MultiplicationTable
-
   attr_reader :prime_number
 
   def initialize

@@ -1,5 +1,4 @@
-require 'rspec'
-require_relative '../lib/multiplication_table'
+require 'spec_helper'
 
 describe MultiplicationTable do
   describe '.generate' do
