@@ -37,3 +37,9 @@ Then we can output the formatted table.
 ./spec/table_printer_spec.rb
 ./lib/table_printer.rb
 
+Finally we need to run this program from the command line.
+
+./bin/runner
+
+and let's ensure that what we are expected to output makes sense.
+

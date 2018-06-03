@@ -7,3 +7,10 @@ STDOUT.
 cell containing the product of the primes for the corresponding row and
 column.
 
+*Usage:*
+
+`./bin/runner`
+
+or optionally add an argument to change the number of primes to output. 
+
+`./bin/runner 15`
